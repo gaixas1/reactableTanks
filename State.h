@@ -17,6 +17,7 @@ namespace tuio
 class state  {
     public:
     bool loaded;
+
     // Funciones base
     virtual state* Process();
     virtual void Draw();

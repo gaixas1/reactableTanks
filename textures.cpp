@@ -8,10 +8,10 @@ using namespace tuio;
             if(m[i].first==s)
                 return m[i].second;
         }
+
         ofImage * t = new ofImage();
         t->loadImage(s);
         pairImage p (s, t);
 		m.push_back(p);
-
 		return t;
     };

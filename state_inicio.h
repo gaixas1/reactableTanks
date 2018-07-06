@@ -4,16 +4,23 @@
 #include "InputGestureDirectFingers.hpp"
 #include "InputGestureDirectObjects.hpp"
 
+#include "state_loader.h"
+#include "mapas.h"
+
 namespace tuio
 {
 
 class state_inicio : public state {
     public:
-    unsigned char change2;
+    int change2;
+    ofImage * fondo;
 
     state_inicio();
+    void Draw();
+    state * Process();
+    void FingerIN(DirectFinger *);
 };
-}
+};
 
 
 #endif // STATE_INICIO_H_INCLUDED

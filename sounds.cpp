@@ -11,6 +11,7 @@ using namespace tuio;
 
         ofSoundPlayer * t = new ofSoundPlayer();
         t->loadSound(s);
+        t->setMultiPlay(true);
         pairSound p (s, t);
 		m.push_back(p);
 		return t;

@@ -3,20 +3,18 @@
 
 #include "State.h"
 #include "state_editor.h"
+#include "state_inicio.h"
+#include "state_selector.h"
+#include "state_play.h"
 
 namespace tuio
 {
-
 class state_loader : public state
 {
     public:
-        ofImage * loading;
-        ofSoundPlayer * fondo;
         state * next;
-        float angle;
-       // pthread_t Hilo;
 
-        state_loader(int, void* = NULL);
+        state_loader(int, unsigned int = 99999999);
         void Draw();
         state * Process();
 };

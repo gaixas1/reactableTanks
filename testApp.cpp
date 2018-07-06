@@ -13,13 +13,12 @@
 #include "TapFeedback.hpp"
 #include "Calibrator.hpp"
 
-#include "InputGestureX.hpp"
-
 #include <list>
 using namespace tuio;
 
 //--------------------------------------------------------------
 void testApp::Setup(){
+	ofSetFrameRate(60);
     j = new tuio::Juego();
 }
 
@@ -30,7 +29,13 @@ void testApp::Update(){
 
 //--------------------------------------------------------------
 void testApp::Draw(){
-    j->Draw();
+	/*
+   glMatrixMode(GL_PROJECTION);
+   gluPerspective(60.0f,(GLfloat)(1024/768),0.01f,10000.0f);
+   gluLookAt(0,0,50,0,0,0,0.0f,-10.0f,0.0f);
+    glMatrixMode(GL_MODELVIEW);
+	*/
+	j->Draw();
 }
 
 //--------------------------------------------------------------

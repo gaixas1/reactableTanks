@@ -4,7 +4,6 @@
 
 
 int main( ){
-
     ofAppGlutWindow window;
     int width = GlobalConfig::getRef("PROGRAM:WIDTH",1024);
     int height = GlobalConfig::getRef("PROGRAM:HEIGHT",768);
